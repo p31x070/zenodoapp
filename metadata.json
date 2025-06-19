@@ -1,0 +1,12 @@
+{
+  "title": "My Awesome Dataset",
+  "creators": [
+    {
+      "name": "Doe, John",
+      "affiliation": "Zenodo"
+    }
+  ],
+  "description": "This is a description of my awesome dataset.",
+  "publication_date": "2024-07-30",
+  "keywords": ["dataset", "zenodo", "awesome"]
+}
