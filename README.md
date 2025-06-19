@@ -92,3 +92,23 @@ You will see status messages printed to the console for each step.
     2. Use a production Zenodo API key in your `.env` file.
 - Ensure your `metadata.json` file is correctly formatted and contains all required fields as per Zenodo's requirements.
 - Publishing is a final action. Once published, a deposition cannot be deleted directly through the API, though new versions can be created.
+
+## Testing API Key Access
+
+A test script `test_zenodo_api.py` is provided to verify that your Zenodo API key is correctly configured in the `.env` file and allows access to the Zenodo API.
+
+To run the test:
+
+1.  **Ensure you have completed the Setup steps**, especially installing dependencies and configuring your `ZENODO_API_KEY` in the `.env` file.
+2.  **Run the test script from your terminal:**
+
+    ```bash
+    python test_zenodo_api.py
+    ```
+
+The script will attempt to connect to the Zenodo API (sandbox by default) and retrieve a list of your depositions.
+
+-   If successful, you will see a message indicating that the API key is working (Status Code: 200).
+-   If there's an issue (e.g., incorrect API key, missing key, network problem), an error message with the corresponding status code and details will be displayed. This can help you troubleshoot your setup.
+
+This test uses the `/api/deposit/depositions` endpoint, which requires authentication.
